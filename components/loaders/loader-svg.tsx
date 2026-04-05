@@ -26,9 +26,9 @@ export function LoaderSvg({ config, point, className }: LoaderSvgProps) {
 
   const particleCount = Math.max(2, Math.round(config.particleCount ?? 64));
 
+  const rafRef = useRef<number | null>(null);
+
   useEffect(() => {
-    let raf = 0;
-    
     if (startTimeRef.current === null) {
       startTimeRef.current = performance.now();
     }
@@ -59,11 +59,16 @@ export function LoaderSvg({ config, point, className }: LoaderSvgProps) {
         }
       }
 
-      raf = requestAnimationFrame(tick);
+      rafRef.current = requestAnimationFrame(tick);
     };
 
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current != null) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+    };
   }, [config, point, particleCount]);
 
   return (

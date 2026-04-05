@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { LOADER_DEFINITIONS } from "@/features/loaders/definitions/loaders";
 import { LoaderCard } from "@/components/loaders/loader-card";
-import { LoaderDetailShell } from "@/components/loaders/loader-detail-shell";
+import { LoaderPreviewModal } from "@/components/loaders/loader-preview-modal";
 import { Crosshair } from "@/components/ui/crosshair";
 import { LanguageSwitcher } from "@/components/language-switcher";
 
@@ -78,19 +78,24 @@ export function LoaderGallery() {
         <div className="p-6 flex-1 bg-[#050505]">
           <motion.div
             layout
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0 border-t border-l border-white/10"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
           >
             <AnimatePresence mode="popLayout">
               {LOADER_DEFINITIONS.map((loader) => (
-                <div
+                <motion.div
                   key={loader.slug}
+                  layout
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8, filter: "blur(4px)" }}
+                  transition={{ duration: 0.25, type: "spring", bounce: 0.2 }}
                   className="flex h-full min-h-0 flex-col"
                 >
                   <LoaderCard
                     slug={loader.slug}
                     onClick={() => setSelectedSlug(loader.slug)}
                   />
-                </div>
+                </motion.div>
               ))}
             </AnimatePresence>
           </motion.div>
@@ -103,35 +108,12 @@ export function LoaderGallery() {
         <Crosshair className="-top-1.5 -right-1.5" />
       </div>
 
-      <AnimatePresence>
-        {selectedLoader && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedSlug(null)}
-              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-            />
-            
-            <motion.div
-              layoutId={`card-${selectedLoader.slug}`}
-              initial={{ scale: 0.9, opacity: 0, filter: 'blur(10px)' }}
-              animate={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
-              exit={{ scale: 0.9, opacity: 0, filter: 'blur(10px)' }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative z-10 flex w-full max-w-7xl flex-col overflow-hidden border border-white/10 bg-[#050505] shadow-2xl md:max-h-[90vh]"
-            >
-              <Crosshair className="-top-1.5 -left-1.5" />
-              <Crosshair className="-top-1.5 -right-1.5" />
-              <Crosshair className="-bottom-1.5 -left-1.5" />
-              <Crosshair className="-bottom-1.5 -right-1.5" />
-
-              <LoaderDetailShell slug={selectedLoader.slug} onClose={() => setSelectedSlug(null)} />
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+      {selectedLoader && (
+        <LoaderPreviewModal
+          loader={selectedLoader}
+          onClose={() => setSelectedSlug(null)}
+        />
+      )}
     </div>
   );
 }

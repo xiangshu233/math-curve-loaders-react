@@ -13,6 +13,7 @@
   "detail": {
     "formula": "Formula",
     "reactTitle": "React component",
+    "copyFormula": "Copy formula",
     "copyFullFile": "Copy full file",
     "copied": "Copied!",
     "close": "Close",
