@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "title": "Math Curve Loaders",
+    "description": "High-fidelity mathematical curve loading animation gallery"
+  },
+  "gallery": {
+    "eyebrow": "Mathematical Curve Motion",
+    "title": "A Gallery of Mathematical Loading Animations",
+    "langZh": "zh",
+    "langEn": "en",
+    "githubAria": "Open repository on GitHub"
+  },
+  "detail": {
+    "formula": "Formula",
+    "reactTitle": "React component",
+    "copyFullFile": "Copy full file",
+    "copied": "Copied!",
+    "close": "Close",
+    "reactHint": "Single file, {react} only — save as {tsx}, import the named export.",
+    "reactHintTail": "Embedded numbers update when you adjust controls (same as preview)."
+  },
+  "controls": {
+    "title": "Controls",
+    "reset": "Reset"
+  },
+  "controlLabels": {
+    "particleCount": "Particles",
+    "trailSpan": "Trail",
+    "durationMs": "Loop",
+    "pulseDurationMs": "Pulse",
+    "rotationDurationMs": "Rotate",
+    "strokeWidth": "Stroke",
+    "baseRadius": "Base radius",
+    "detailAmplitude": "Detail",
+    "petalCount": "Petals",
+    "curveScale": "Scale",
+    "orbitRadius": "Base radius",
+    "roseA": "Base radius",
+    "roseABoost": "Detail",
+    "roseK": "Petals",
+    "roseScale": "Scale",
+    "roseBreathBase": "Breath base",
+    "roseBreathBoost": "Breath boost",
+    "spiralR": "R",
+    "spiralr": "r",
+    "spirald": "d",
+    "spiralScale": "Scale",
+    "spiralBreath": "Pulse",
+    "lissajousAmp": "Base radius",
+    "lissajousAmpBoost": "Detail",
+    "lissajousAX": "Petals",
+    "lissajousBY": "Y freq",
+    "lissajousPhase": "Phase",
+    "lissajousYScale": "Scale",
+    "lemniscateA": "Base radius",
+    "lemniscateBoost": "Detail",
+    "spiroR": "Base radius",
+    "spiror": "Petals",
+    "spirorBoost": "r boost",
+    "spirod": "Detail",
+    "spirodBoost": "d boost",
+    "spiroScale": "Scale",
+    "butterflyTurns": "Turns",
+    "butterflyScale": "Scale",
+    "butterflyPulse": "Pulse",
+    "butterflyCosWeight": "Cos weight",
+    "butterflyPower": "Power",
+    "cardioidA": "Base radius",
+    "cardioidPulse": "Pulse",
+    "cardioidScale": "Scale",
+    "heartWaveB": "b",
+    "heartWaveRoot": "Root span",
+    "heartWaveAmp": "Wave amp",
+    "heartWaveScaleX": "X scale",
+    "heartWaveScaleY": "Y scale",
+    "searchTurns": "Turns",
+    "searchBaseRadius": "Base radius",
+    "searchRadiusAmp": "Radius amp",
+    "searchPulse": "Pulse",
+    "searchScale": "Scale",
+    "fourierX1": "x cos1",
+    "fourierX3": "x cos3",
+    "fourierX5": "x sin5",
+    "fourierY1": "y sin1",
+    "fourierY2": "y sin2",
+    "fourierY4": "y cos4",
+    "fourierMixBase": "Mix base",
+    "fourierMixPulse": "Mix pulse"
+  },
+  "loaders": {
+    "original-thinking": {
+      "name": "Original Thinking",
+      "tag": "x = 7cos t − d·cos(7t)",
+      "description": "Two lines: x = 7cos(t) − d·cos(7t), y = 7sin(t) − d·sin(7t) with d on the pulse. Same family as the sliders — tune Petals / Detail instead of duplicating cards."
+    },
+    "thinking-five": {
+      "name": "Thinking Five",
+      "tag": "k = 5 epicycloid",
+      "description": "Five lobes: smaller k than the default seven, so the inner pattern stays open and rhythmic."
+    },
+    "thinking-nine": {
+      "name": "Thinking Nine",
+      "tag": "k = 9 epicycloid",
+      "description": "Nine lobes: higher k packs more turns in the ring for a denser, more braided look."
+    },
+    "rose-orbit": {
+      "name": "Rose Orbit",
+      "tag": "r = cos(kθ)",
+      "description": "Orbit radius is modulated by cos(k·t)."
+    },
+    "rose-curve": {
+      "name": "Rose Curve",
+      "tag": "r = a cos(5θ)",
+      "description": "Using r = a cos(5t) creates five evenly spaced lobes, and the breathing multiplier gently swells each petal in and out."
+    },
+    "rose-two": {
+      "name": "Rose Two",
+      "tag": "r = a cos(2θ)",
+      "description": "With k = 2, the cosine radius forms broad opposing petals, and the breathing factor makes the center pulse like the original."
+    },
+    "rose-three": {
+      "name": "Rose Three",
+      "tag": "r = a cos(3θ)",
+      "description": "With k = 3, the curve resolves into three rotating petals, and the inner breathing keeps the motion from feeling mathematically rigid."
+    },
+    "rose-four": {
+      "name": "Rose Four",
+      "tag": "r = a cos(4θ)",
+      "description": "With k = 4, the petals settle into a balanced cross-like rose, and the breathing core adds the same soft pulse as the original loader."
+    },
+    "lissajous-drift": {
+      "name": "Lissajous Drift",
+      "tag": "x = sin(at), y = sin(bt)",
+      "description": "Crossing sinusoidal frequencies."
+    },
+    "lemniscate-bloom": {
+      "name": "Lemniscate Bloom",
+      "tag": "Bernoulli Lemniscate",
+      "description": "Breathing infinity curve."
+    },
+    "hypotrochoid-loop": {
+      "name": "Hypotrochoid Loop",
+      "tag": "Inner Spirograph",
+      "description": "Nested loops from rolling-circle terms."
+    },
+    "three-petal-spiral": {
+      "name": "Three-Petal Spiral",
+      "tag": "R = 3, r = 1, d = 3",
+      "description": "This rolling-circle setup resolves into three large looping petals, all breathing together like a compact spiral flower."
+    },
+    "four-petal-spiral": {
+      "name": "Four-Petal Spiral",
+      "tag": "R = 4, r = 1, d = 3",
+      "description": "With R = 4, the rolling-circle path settles into four looping petals, rotating and breathing as one ring."
+    },
+    "five-petal-spiral": {
+      "name": "Five-Petal Spiral",
+      "tag": "R = 5, r = 1, d = 3",
+      "description": "With R = 5, the loop count increases to five petals, giving the spiral flower a denser and more ornate rhythm."
+    },
+    "six-petal-spiral": {
+      "name": "Six-Petal Spiral",
+      "tag": "R = 6, r = 1, d = 3",
+      "description": "The rolling-circle path splits into six petals, and the whole ring breathes in one unified pulse like the original loader."
+    },
+    "butterfly-phase": {
+      "name": "Butterfly Phase",
+      "tag": "Butterfly Curve",
+      "description": "Exponential and high-frequency cosine terms stretch the wings unevenly."
+    },
+    "cardioid-glow": {
+      "name": "Cardioid Glow",
+      "tag": "Cardioid",
+      "description": "Soft pulsing heart wave."
+    },
+    "cardioid-heart": {
+      "name": "Cardioid Heart",
+      "tag": "r = a(1 + cosθ)",
+      "description": "Upright heart from cardioid."
+    },
+    "heart-wave": {
+      "name": "Heart Wave",
+      "tag": "f(x) Heart Wave",
+      "description": "x^(2/3) envelope with sin(bπx) interior ripples."
+    },
+    "spiral-search": {
+      "name": "Spiral Search",
+      "tag": "Archimedean Spiral",
+      "description": "Fast-growing angle combined with a cosine-modulated radius."
+    },
+    "fourier-flow": {
+      "name": "Fourier Flow",
+      "tag": "Fourier Curve",
+      "description": "Sine and cosine components interfere with one another."
+    }
+  }
+}

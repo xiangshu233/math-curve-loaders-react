@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "title": "数学曲线加载动画",
+    "description": "高保真数学曲线加载动画画廊"
+  },
+  "gallery": {
+    "eyebrow": "数学曲线运动",
+    "title": "数学曲线加载动画画廊",
+    "langZh": "zh",
+    "langEn": "en",
+    "githubAria": "在 GitHub 上打开本仓库"
+  },
+  "detail": {
+    "formula": "公式",
+    "reactTitle": "React 组件",
+    "copyFullFile": "复制完整文件",
+    "copied": "已复制",
+    "close": "关闭",
+    "reactHint": "单文件，仅依赖 {react} — 保存为 {tsx}，import 具名导出。",
+    "reactHintTail": "嵌入的数值会随左侧调节变化（与预览一致）。"
+  },
+  "controls": {
+    "title": "控制",
+    "reset": "重置"
+  },
+  "controlLabels": {
+    "particleCount": "粒子数",
+    "trailSpan": "拖尾",
+    "durationMs": "循环",
+    "pulseDurationMs": "脉冲",
+    "rotationDurationMs": "旋转",
+    "strokeWidth": "线宽",
+    "baseRadius": "基圆半径",
+    "detailAmplitude": "细节",
+    "petalCount": "瓣数",
+    "curveScale": "缩放",
+    "orbitRadius": "基圆半径",
+    "roseA": "基圆半径",
+    "roseABoost": "细节",
+    "roseK": "瓣数",
+    "roseScale": "缩放",
+    "roseBreathBase": "呼吸基值",
+    "roseBreathBoost": "呼吸增强",
+    "spiralR": "R",
+    "spiralr": "r",
+    "spirald": "d",
+    "spiralScale": "缩放",
+    "spiralBreath": "脉冲",
+    "lissajousAmp": "基圆半径",
+    "lissajousAmpBoost": "细节",
+    "lissajousAX": "瓣数",
+    "lissajousBY": "Y 频率",
+    "lissajousPhase": "相位",
+    "lissajousYScale": "缩放",
+    "lemniscateA": "基圆半径",
+    "lemniscateBoost": "细节",
+    "spiroR": "基圆半径",
+    "spiror": "瓣数",
+    "spirorBoost": "r 增强",
+    "spirod": "细节",
+    "spirodBoost": "d 增强",
+    "spiroScale": "缩放",
+    "butterflyTurns": "圈数",
+    "butterflyScale": "缩放",
+    "butterflyPulse": "脉冲",
+    "butterflyCosWeight": "余弦权重",
+    "butterflyPower": "幂次",
+    "cardioidA": "基圆半径",
+    "cardioidPulse": "脉冲",
+    "cardioidScale": "缩放",
+    "heartWaveB": "b",
+    "heartWaveRoot": "根区间",
+    "heartWaveAmp": "波纹幅度",
+    "heartWaveScaleX": "X 缩放",
+    "heartWaveScaleY": "Y 缩放",
+    "searchTurns": "圈数",
+    "searchBaseRadius": "基圆半径",
+    "searchRadiusAmp": "半径幅度",
+    "searchPulse": "脉冲",
+    "searchScale": "缩放",
+    "fourierX1": "x cos1",
+    "fourierX3": "x cos3",
+    "fourierX5": "x sin5",
+    "fourierY1": "y sin1",
+    "fourierY2": "y sin2",
+    "fourierY4": "y cos4",
+    "fourierMixBase": "混合基值",
+    "fourierMixPulse": "混合脉冲"
+  },
+  "loaders": {
+    "original-thinking": {
+      "name": "原始思考",
+      "tag": "x = 7cos t − d·cos(7t)",
+      "description": "两行式：x = 7cos(t) − d·cos(7t)，y = 7sin(t) − d·sin(7t)，d 随脉冲变化。与滑块同一族曲线——用瓣数/细节调节即可，不必堆重复卡片。"
+    },
+    "thinking-five": {
+      "name": "五瓣思考",
+      "tag": "k = 5 epicycloid",
+      "description": "五瓣：k 比默认的 7 更小，内部纹样更疏、节奏更干净。"
+    },
+    "thinking-nine": {
+      "name": "九瓣思考",
+      "tag": "k = 9 epicycloid",
+      "description": "九瓣：更高的 k 让环内转折更密，整体更「编织感」。"
+    },
+    "rose-orbit": {
+      "name": "玫瑰轨道",
+      "tag": "r = cos(kθ)",
+      "description": "轨道半径由 cos(k·t) 调制。"
+    },
+    "rose-curve": {
+      "name": "玫瑰曲线",
+      "tag": "r = a cos(5θ)",
+      "description": "r = a cos(5t) 形成五枚均匀花瓣，呼吸系数让每瓣轻微胀缩。"
+    },
+    "rose-two": {
+      "name": "玫瑰 · 二",
+      "tag": "r = a cos(2θ)",
+      "description": "k = 2 时余弦半径呈宽阔对瓣，呼吸让中心如原版般脉动。"
+    },
+    "rose-three": {
+      "name": "玫瑰 · 三",
+      "tag": "r = a cos(3θ)",
+      "description": "k = 3 时化为三枚旋转花瓣，内层呼吸削弱「过于数学」的僵硬感。"
+    },
+    "rose-four": {
+      "name": "玫瑰 · 四",
+      "tag": "r = a cos(4θ)",
+      "description": "k = 4 时呈十字形四瓣，中心呼吸与原版加载器同款柔和脉冲。"
+    },
+    "lissajous-drift": {
+      "name": "利萨茹漂移",
+      "tag": "x = sin(at), y = sin(bt)",
+      "description": "两路正弦频率交错。"
+    },
+    "lemniscate-bloom": {
+      "name": "双纽线绽放",
+      "tag": "Bernoulli Lemniscate",
+      "description": "呼吸着的∞形曲线。"
+    },
+    "hypotrochoid-loop": {
+      "name": "内旋轮线环",
+      "tag": "Inner Spirograph",
+      "description": "滚圆参数带来的嵌套小圈。"
+    },
+    "three-petal-spiral": {
+      "name": "三瓣螺线",
+      "tag": "R = 3, r = 1, d = 3",
+      "description": "滚圆路径收束为三枚大环瓣，整体同呼吸。"
+    },
+    "four-petal-spiral": {
+      "name": "四瓣螺线",
+      "tag": "R = 4, r = 1, d = 3",
+      "description": "R = 4 时四枚环瓣旋转、同频呼吸。"
+    },
+    "five-petal-spiral": {
+      "name": "五瓣螺线",
+      "tag": "R = 5, r = 1, d = 3",
+      "description": "五枚花瓣使螺线花形更繁密。"
+    },
+    "six-petal-spiral": {
+      "name": "六瓣螺线",
+      "tag": "R = 6, r = 1, d = 3",
+      "description": "六瓣分裂，整环仍统一呼吸。"
+    },
+    "butterfly-phase": {
+      "name": "蝴蝶相位",
+      "tag": "Butterfly Curve",
+      "description": "指数项与高次余弦让两翼拉伸不均。"
+    },
+    "cardioid-glow": {
+      "name": "心形线 · 光晕",
+      "tag": "Cardioid",
+      "description": "柔和脉动的心形波。"
+    },
+    "cardioid-heart": {
+      "name": "心形线 · 心形",
+      "tag": "r = a(1 + cosθ)",
+      "description": "竖直心形线。"
+    },
+    "heart-wave": {
+      "name": "心形波",
+      "tag": "f(x) Heart Wave",
+      "description": "x^(2/3) 包络叠加 sin(bπx) 内纹。"
+    },
+    "spiral-search": {
+      "name": "螺旋搜寻",
+      "tag": "Archimedean Spiral",
+      "description": "快速增长的角向与余弦调制半径。"
+    },
+    "fourier-flow": {
+      "name": "傅里叶流动",
+      "tag": "Fourier Curve",
+      "description": "多组正余弦分量相互干涉。"
+    }
+  }
+}
